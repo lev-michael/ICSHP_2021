@@ -1,0 +1,14 @@
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\Excercise02.exe
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\Excercise02.deps.json
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\Excercise02.runtimeconfig.json
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\Excercise02.runtimeconfig.dev.json
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\Excercise02.dll
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\Excercise02.pdb
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\obj\Debug\netcoreapp3.1\Excercise02.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\obj\Debug\netcoreapp3.1\Excercise02.AssemblyInfoInputs.cache
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\obj\Debug\netcoreapp3.1\Excercise02.AssemblyInfo.cs
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\obj\Debug\netcoreapp3.1\Excercise02.dll
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\obj\Debug\netcoreapp3.1\Excercise02.pdb
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\BaseLib.dll
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\bin\Debug\netcoreapp3.1\BaseLib.pdb
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\Excercise02\obj\Debug\netcoreapp3.1\Excercise02.csproj.CopyComplete

@@ -1,0 +1,8 @@
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\bin\Debug\netcoreapp3.1\BaseLib.deps.json
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\bin\Debug\netcoreapp3.1\BaseLib.dll
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\bin\Debug\netcoreapp3.1\BaseLib.pdb
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\obj\Debug\netcoreapp3.1\BaseLib.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\obj\Debug\netcoreapp3.1\BaseLib.AssemblyInfoInputs.cache
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\obj\Debug\netcoreapp3.1\BaseLib.AssemblyInfo.cs
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\obj\Debug\netcoreapp3.1\BaseLib.dll
+C:\Users\Michael\Documents\ICSHP\ICSHP_2021\BaseLib\obj\Debug\netcoreapp3.1\BaseLib.pdb
