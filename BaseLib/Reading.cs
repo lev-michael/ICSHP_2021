@@ -7,13 +7,13 @@ namespace Fei
     
         public class Reading
         {
-            public static int ReadInt(String text)
+            public static double Readdouble(String text)
             {
-                int num;
+                double num;
                 String input;
                 Console.Write(text);
                 input = Console.ReadLine();
-                while (!Int32.TryParse(input, out num))
+                while (!Double.TryParse(input, out num))
                 {
                     Console.WriteLine("Wrong input. Try again");
                     Console.Write(text);
@@ -22,13 +22,13 @@ namespace Fei
                 return num;
             }
 
-            public static int ReadInt(int min, String text)
+            public static double Readdouble(double min, String text)
             {
-                int num;
+                double num;
                 String input;
                 Console.Write(text);
                 input = Console.ReadLine();
-                while (!Int32.TryParse(input, out num) && num >= min)
+                while (!Double.TryParse(input, out num) && num >= min)
                 {
                     Console.WriteLine("Wrong input. Try again");
                     Console.Write(text);
