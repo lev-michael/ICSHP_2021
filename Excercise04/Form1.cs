@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Excercise04
 {
-    enum Mode { AnyLetter, FirstLetter }
+    enum Mode { AnyLetter, FirstLetter, Words }
     public partial class Form1 : Form
     {
         Random random = new Random();
         Stats stats = new Stats();
+        Words words = new Words();
         Mode mode;
 
         public Form1()
@@ -34,15 +35,24 @@ namespace Excercise04
 
         private void OnTimerTick(object sender, EventArgs e)
         {
-            if (gameListBox.Items.Count > 6)
+            if(mode != Mode.Words)
             {
-                timer1.Stop();
-                gameListBox.KeyDown -= OnKeyDown;
-                gameListBox.Items.Clear();
-                gameListBox.Items.Add("Game over");
-                return;
+                if (gameListBox.Items.Count > 6)
+                {
+                    GameOver();
+                } else
+                {
+                    gameListBox.Items.Add((Keys)random.Next(65, 91));
+                }
             }
-            gameListBox.Items.Add((Keys)random.Next(65, 91));
+        }
+
+        private void GameOver()
+        {
+            timer1.Stop();
+            gameListBox.KeyDown -= OnKeyDown;
+            gameListBox.Items.Clear();
+            gameListBox.Items.Add("Game over");
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
@@ -60,6 +70,28 @@ namespace Excercise04
                 {
                     stats.Update(false);
                 }
+            } else if ( mode == Mode.Words)
+            {
+                if ((Keys)gameListBox.Items[0] == e.KeyCode)
+                {
+                    gameListBox.Items.RemoveAt(0);
+                    gameListBox.Refresh();
+                    stats.Update(true);
+                    if (gameListBox.Items.Count == 0)
+                    {
+                        string word = words.GetRandomWord();
+                        foreach (var c in word)
+                        {
+                            gameListBox.Items.Add((Keys) char.ToUpper(c));
+                        }
+                    }
+                }
+                else
+                {
+                    GameOver();
+                }
+
+
             } else
             {
                 if ((Keys)gameListBox.Items[0] == e.KeyCode)
@@ -91,19 +123,27 @@ namespace Excercise04
                 timer1.Interval -= 8;
         }
 
-        private void NewGameButtonAnyLetter_Click(object sender, EventArgs e)
-        {
-            mode = Mode.AnyLetter;
-            StartNewGame();
-        }
-
         private void StartNewGame()
         {
             gameListBox.Items.Clear();
             stats.clearStats();
-            timer1.Interval = 800;
+
+            if(mode == Mode.Words)
+            {
+                string word = words.GetRandomWord();
+                foreach (var c in word) 
+                {
+                    gameListBox.Items.Add((Keys)char.ToUpper(c));
+                }
+            } else
+            {
+                timer1.Interval = 800;
+                timer1.Start();
+            }
+
             gameListBox.KeyDown += OnKeyDown;
-            timer1.Start();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -116,10 +156,30 @@ namespace Excercise04
 
         }
 
-        private void NewGameFirstLetter_Click(object sender, EventArgs e)
+
+        private void matchAnyLetterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mode = Mode.AnyLetter;
+            StartNewGame();
+        }
+
+        private void matchFirstLetterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             mode = Mode.FirstLetter;
             StartNewGame();
         }
+
+        private void matchWordsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mode = Mode.Words;
+            StartNewGame();
+        }
+
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

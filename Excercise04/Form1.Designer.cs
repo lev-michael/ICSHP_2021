@@ -36,11 +36,13 @@
             this.missedLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.accurancyLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.difficultyLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.difficultProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.NewGameButtonAnyLetter = new System.Windows.Forms.ToolStripButton();
-            this.NewGameFirstLetter = new System.Windows.Forms.ToolStripButton();
+            this.newGameStripMenu = new System.Windows.Forms.ToolStripDropDownButton();
+            this.matchAnyLetterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchFirstLetterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchWordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,48 +100,61 @@
             this.difficultyLabel.Text = "Difficult:";
             this.difficultyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 800;
-            // 
             // difficultProgressBar
             // 
             this.difficultProgressBar.Maximum = 800;
             this.difficultProgressBar.Name = "difficultProgressBar";
             this.difficultProgressBar.Size = new System.Drawing.Size(200, 24);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 800;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NewGameButtonAnyLetter,
-            this.NewGameFirstLetter});
+            this.newGameStripMenu});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1178, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1178, 34);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // NewGameButtonAnyLetter
+            // newGameStripMenu
             // 
-            this.NewGameButtonAnyLetter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.NewGameButtonAnyLetter.Image = ((System.Drawing.Image)(resources.GetObject("NewGameButtonAnyLetter.Image")));
-            this.NewGameButtonAnyLetter.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NewGameButtonAnyLetter.Name = "NewGameButtonAnyLetter";
-            this.NewGameButtonAnyLetter.Size = new System.Drawing.Size(250, 33);
-            this.NewGameButtonAnyLetter.Text = "New game - match any letter ";
-            this.NewGameButtonAnyLetter.Click += new System.EventHandler(this.NewGameButtonAnyLetter_Click);
+            this.newGameStripMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.newGameStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.matchAnyLetterToolStripMenuItem,
+            this.matchFirstLetterToolStripMenuItem,
+            this.matchWordsToolStripMenuItem});
+            this.newGameStripMenu.Image = ((System.Drawing.Image)(resources.GetObject("newGameStripMenu.Image")));
+            this.newGameStripMenu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newGameStripMenu.Name = "newGameStripMenu";
+            this.newGameStripMenu.Size = new System.Drawing.Size(116, 29);
+            this.newGameStripMenu.Text = "New Game";
             // 
-            // NewGameFirstLetter
+            // matchAnyLetterToolStripMenuItem
             // 
-            this.NewGameFirstLetter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.NewGameFirstLetter.Image = ((System.Drawing.Image)(resources.GetObject("NewGameFirstLetter.Image")));
-            this.NewGameFirstLetter.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NewGameFirstLetter.Name = "NewGameFirstLetter";
-            this.NewGameFirstLetter.Size = new System.Drawing.Size(247, 33);
-            this.NewGameFirstLetter.Text = "New game - match first letter";
-            this.NewGameFirstLetter.Click += new System.EventHandler(this.NewGameFirstLetter_Click);
+            this.matchAnyLetterToolStripMenuItem.Name = "matchAnyLetterToolStripMenuItem";
+            this.matchAnyLetterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.matchAnyLetterToolStripMenuItem.Text = "Match any letter";
+            this.matchAnyLetterToolStripMenuItem.Click += new System.EventHandler(this.matchAnyLetterToolStripMenuItem_Click);
+            // 
+            // matchFirstLetterToolStripMenuItem
+            // 
+            this.matchFirstLetterToolStripMenuItem.Name = "matchFirstLetterToolStripMenuItem";
+            this.matchFirstLetterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.matchFirstLetterToolStripMenuItem.Text = "Match first letter";
+            this.matchFirstLetterToolStripMenuItem.Click += new System.EventHandler(this.matchFirstLetterToolStripMenuItem_Click);
+            // 
+            // matchWordsToolStripMenuItem
+            // 
+            this.matchWordsToolStripMenuItem.Name = "matchWordsToolStripMenuItem";
+            this.matchWordsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.matchWordsToolStripMenuItem.Text = "Match words";
+            this.matchWordsToolStripMenuItem.Click += new System.EventHandler(this.matchWordsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -174,8 +189,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripProgressBar difficultProgressBar;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton NewGameButtonAnyLetter;
-        private System.Windows.Forms.ToolStripButton NewGameFirstLetter;
+        private System.Windows.Forms.ToolStripDropDownButton newGameStripMenu;
+        private System.Windows.Forms.ToolStripMenuItem matchAnyLetterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matchFirstLetterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matchWordsToolStripMenuItem;
     }
 }
 
